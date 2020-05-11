@@ -1,6 +1,7 @@
 package com.your.domain;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import com.your.domain.cmds.*;
 
 public class Main extends JavaPlugin {
 
@@ -8,7 +9,7 @@ public class Main extends JavaPlugin {
     }
     @Override
     public void onEnable() {
-        // this.getCommand("cmdname").setExecutor(new cmdclass());
+        this.getCommand("helloworld").setExecutor(new helloWorld());
         // getServer().getPluginManager().registerEvents(new evtListenerClass(), this);
         loadConfig();
 
