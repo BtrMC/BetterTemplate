@@ -14,8 +14,8 @@ public class Main extends JavaPlugin {
         this.getCommand("helloworld").setExecutor(new helloWorld());
         // Register chat listener
         getServer().getPluginManager().registerEvents(new chatListener(), this);
+        // load the config if u have one
         loadConfig();
-
     }
 
     private void loadConfig() {
