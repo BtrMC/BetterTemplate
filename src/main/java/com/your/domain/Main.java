@@ -2,6 +2,7 @@ package com.your.domain;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import com.your.domain.cmds.*;
+import com.your.domain.listeners.*;
 
 public class Main extends JavaPlugin {
 
@@ -9,8 +10,10 @@ public class Main extends JavaPlugin {
     }
     @Override
     public void onEnable() {
+        // Register hello world command
         this.getCommand("helloworld").setExecutor(new helloWorld());
-        // getServer().getPluginManager().registerEvents(new evtListenerClass(), this);
+        // Register chat listener
+        getServer().getPluginManager().registerEvents(new chatListener(), this);
         loadConfig();
 
     }
